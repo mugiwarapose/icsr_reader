@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE ichicsr SYSTEM "https://www.accessdata.fda.gov/xml/icsr-xml-v3.0.dtd">
+<ichicsr lang="en">
+    <ichicsrmessageheader>
+        <messagetype th:utext="${M_1_1}"/>
+        <messageformatversion th:utext="${M_1_2}"/>
+        <messageformatrelease th:utext="${M_1_3}"/>
+        <messagenumb th:utext="${M_1_4}"/>
+        <messagesenderidentifier th:utext="${M_1_5}"/>
+        <messagereceiveridentifier th:utext="${M_1_6}"/>
+        <messagedateformat th:utext="${M_1_7a}"/>
+        <messagedate th:utext="${M_1_7b}"/>
+    </ichicsrmessageheader>
+    <safetyreport th:each="case : ${cases}">
+        <safetyreportversion></safetyreportversion>
+        <safetyreportid th:utext="${case.A_1_0_1}"/>
+        <primarysourcecountry th:if="${case.A_1_1}" th:utext="${case.A_1_1}"/>
+        <occurcountry th:if="${case.A_1_2}" th:utext="${case.A_1_2}"/>
+        <transmissiondateformat th:utext="${case.A_1_3_a}"/>
+        <transmissiondate th:utext="${case.A_1_3_b}"/>
+        <reporttype th:utext="${case.A_1_4}"/>
+        <serious th:utext="${case.A_1_5_1}"/>
+        <seriousnessdeath th:utext="${case.A_1_5_2a}"/>
+        <seriousnesslifethreatening th:utext="${case.A_1_5_2b}"/>
+        <seriousnesshospitalization th:utext="${case.A_1_5_2c}"/>
+        <seriousnessdisabling th:utext="${case.A_1_5_2d}"/>
+        <seriousnesscongenitalanomali th:utext="${case.A_1_5_2e}"/>
+        <seriousnessother  th:utext="${case.A_1_5_2f}"/>
+        <receivedateformat th:utext="${case.A_1_6a}"/>
+        <receivedate th:utext="${case.A_1_6b}"/>
+        <receiptdateformat  th:utext="${case.A_1_7a}"/>
+        <receiptdate th:utext="${case.A_1_7b}"/>
+        <additionaldocument th:utext="${case.A_1_8_1}"/>
+        <documentlist th:utext="${case.A_1_8_2}"/>
+        <fulfillexpeditecriteria th:utext="${case.A_1_9}"/>
+        <companynumb th:if="${case.A_1_10_2}" th:utext="${case.A_1_10_2}"/>
+        <duplicate th:if="${case.A_1_11}" th:utext="${case.A_1_11}"/>
+        <reportduplicate th:each="item : ${case.A_1_11_r}">
+            <duplicatesource th:utext="${item.A_1_11_1}"/>
+            <duplicatenumb th:utext="${item.A_1_11_2}"/>
+        </reportduplicate>
+        <linkedreport th:each="item : ${case.A_1_12_r}">
+            <linkreportnumb th:utext="${item}"/>
+        </linkedreport>
+        <casenullification th:if="${case.A_1_13}" th:utext="${case.A_1_13}"/>
+        <nullificationreason th:if="${case.A_1_13}" th:utext="${case.A_1_13_1}"/>
+        <medicallyconfirm th:utext="${case.A_1_14}"/>
+        <fdasafetyreporttype th:utext="${case.A_1_FDA_16}"/>
+        <primarysource th:each="item : ${case.A_2_1_r}">
+            <reportertitle th:utext="${item.A_2_1_1a}"/>
+            <reportergivename th:utext="${item.A_2_1_1b}"/>
+            <reportermiddlename th:utext="${item.A_2_1_1c}"/>
+            <reporterfamilyname th:utext="${item.A_2_1_1d}"/>
+            <reporterorganization th:utext="${item.A_2_1_2a}"/>
+            <reporterdepartment th:utext="${item.A_2_1_2b}"/>
+            <reporterstreet th:utext="${item.A_2_1_2c}"/>
+            <reportercity th:utext="${item.A_2_1_2d}"/>
+            <reporterstate th:utext="${item.A_2_1_2e}"/>
+            <reporterpostcode th:utext="${item.A_2_1_2f}"/>
+            <reportercountry th:utext="${item.A_2_1_3}"/>
+            <qualification th:utext="${item.A_2_1_4}"/>
+            <literaturereference th:utext="${case.A_2_2}"/>
+            <studyname th:if="${item.primary == true}" th:utext="${case.A_2_3_1}"/>
+            <sponsorstudynumb th:if="${item.primary == true}" th:utext="${case.A_2_3_2}"/>
+            <observestudytype th:if="${item.primary == true}" th:utext="${case.A_2_3_3}"/>
+        </primarysource>
+        <sender>
+            <sendertype th:utext="${case.A_3_1_1}"/>
+            <senderorganization th:utext="${case.A_3_1_2}"/>
+            <senderdepartment th:utext="${case.A_3_1_3a}"/>
+            <sendertitle th:utext="${case.A_3_1_3b}"/>
+            <sendergivename th:utext="${case.A_3_1_3c}"/>
+            <sendermiddlename th:utext="${case.A_3_1_3d}"/>
+            <senderfamilyname th:utext="${case.A_3_1_3e}"/>
+            <senderstreetaddress th:utext="${case.A_3_1_4a}"/>
+            <sendercity th:utext="${case.A_3_1_4b}"/>
+            <senderstate th:utext="${case.A_3_1_4c}"/>
+            <senderpostcode th:utext="${case.A_3_1_4d}"/>
+            <sendercountrycode th:utext="${case.A_3_1_4e}"/>
+            <sendertel th:utext="${case.A_3_1_4f}"/>
+            <sendertelextension th:utext="${case.A_3_1_4g}"/>
+            <sendertelcountrycode th:utext="${case.A_3_1_4h}"/>
+            <senderfax th:utext="${case.A_3_1_4i}"/>
+            <senderfaxextension th:utext="${case.A_3_1_4j}"/>
+            <senderfaxcountrycode th:utext="${case.A_3_1_4k}"/>
+            <senderemailaddress th:utext="${case.A_3_1_4l}"/>
+        </sender>
+        <receiver>
+            <receivertype th:utext="${case.A_3_2_1}"/>
+            <receiverorganization th:utext="${case.A_3_2_2a}"/>
+            <receiverdepartment th:utext="${case.A_3_2_2b}"/>
+            <receivertitle th:utext="${case.A_3_2_2c}"/>
+            <receivergivename th:utext="${case.A_3_2_2d}"/>
+            <receiverstreetaddress th:utext="${case.A_3_2_3a}"/>
+            <receivercity th:utext="${case.A_3_2_3b}"/>
+            <receiverstate th:utext="${case.A_3_2_3c}"/>
+            <receiverpostcode th:utext="${case.A_3_2_3d}"/>
+            <receivercountrycode th:utext="${case.A_3_2_3e}"/>
+            <receivertel th:utext="${case.A_3_2_3f}"/>
+            <receivertelextension th:utext="${case.A_3_2_3g}"/>
+            <receivertelcountrycode th:utext="${case.A_3_2_3h}"/>
+            <receiverfax th:utext="${case.A_3_2_3i}"/>
+            <receiverfaxextension th:utext="${case.A_3_2_3j}"/>
+            <receiverfaxcountrycode th:utext="${case.A_3_2_3k}"/>
+            <receiveremailaddress th:utext="${case.A_3_2_3l}"/>
+        </receiver>
+        <patient>
+            <patientinitial th:utext="${case.B_1_1}"/>
+            <patientgpmedicalrecordnumb th:utext="${case.B_1_1_1a}"/>
+            <patientspecialistrecordnumb th:utext="${case.B_1_1_1b}"/>
+            <patienthospitalrecordnumb th:utext="${case.B_1_1_1c}"/>
+            <patientinvestigationnumb th:utext="${case.B_1_1_1d}"/>
+            <patientbirthdateformat  th:utext="${case.B_1_2_1a}"/>
+            <patientbirthdate  th:utext="${case.B_1_2_1b}"/>
+            <patientonsetage th:utext="${case.B_1_2_2a}"/>
+            <patientonsetageunit th:utext="${case.B_1_2_2b}"/>
+            <gestationperiod th:utext="${case.B_1_2_2_1a}"/>
+            <gestationperiodunit th:utext="${case.B_1_2_2_1b}"/>
+            <patientagegroup th:utext="${case.B_1_2_3}"/>
+            <patientweight th:utext="${case.B_1_3}"/>
+            <patientheight th:utext="${case.B_1_4}"/>
+            <patientsex th:utext="${case.B_1_5}"/>
+            <lastmenstrualdateformat th:utext="${case.B_1_6_a}"/>
+            <patientlastmenstrualdate th:utext="${case.B_1_6_b}"/>
+            <patientmedicalhistorytext th:if="${case.B_1_7_2}" th:utext="${case.B_1_7_2}"/>
+            <resultstestsprocedures th:utext="${case.B_3_2}"/>
+            <medicalhistoryepisode th:each="item : ${case.B_1_7_r}">
+                <patientepisodenamemeddraversion th:utext="${item.B_1_7_1a_1}"/>
+                <patientepisodename th:utext="${item.B_1_7_1a_2}"/>
+                <patientmedicalstartdateformat th:utext="${item.B_1_7_1b}"/>
+                <patientmedicalstartdate th:utext="${item.B_1_7_1c}"/>
+                <patientmedicalcontinue th:utext="${item.B_1_7_1d}"/>
+                <patientmedicalenddateformat th:utext="${item.B_1_7_1e}"/>
+                <patientmedicalenddate th:utext="${item.B_1_7_1f}"/>
+                <patientmedicalcomment th:utext="${item.B_1_7_1g}"/>
+            </medicalhistoryepisode>
+            <patientpastdrugtherapy th:each="item : ${case.B_1_8_r}">
+                <patientdrugname th:utext="${item.B_1_8a}"/>
+                <patientdrugstartdateformat th:utext="${item.B_1_8b}"/>
+                <patientdrugstartdate th:utext="${item.B_1_8c}"/>
+                <patientdrugenddateformat th:utext="${item.B_1_8d}"/>
+                <patientdrugenddate th:utext="${item.B_1_8e}"/>
+                <patientindicationmeddraversion th:utext="${item.B_1_8f_1}"/>
+                <patientdrugindication th:utext="${item.B_1_8f_2}"/>
+                <patientdrgreactionmeddraversion th:utext="${item.B_1_8g_1}"/>
+                <patientdrugreaction th:utext="${item.B_1_8g_2}"/>
+            </patientpastdrugtherapy>
+            <patientdeath>
+                <patientdeathdateformat th:utext="${case.B_1_9_1a}"/>
+                <patientdeathdate th:utext="${case.B_1_9_1b}"/>
+                <patientautopsyyesno th:utext="${case.B_1_9_3}"/>
+                <patientdeathcause th:each="item : ${case.B_1_9_2_r}">
+                    <patientdeathreportmeddraversion th:utext="${item.B_1_9_2a}"/>
+                    <patientdeathreport th:utext="${item.B_1_9_2b}"/>
+                </patientdeathcause>
+                <patientautopsy th:each="item : ${case.B_1_9_4_r}">
+                    <patientdetermautopsmeddraversion th:utext="${item.B_1_9_4a}"/>
+                    <patientdetermineautopsy th:utext="${item.B_1_9_4b}"/>
+                </patientautopsy>
+            </patientdeath>
+            <parent>
+                <parentidentification th:utext="${case.B_1_10_1}"/>
+                <parentbirthdateformat th:utext="${case.B_1_10_2_1a}"/>
+                <parentbirthdate th:utext="${case.B_1_10_2_1b}"/>
+                <parentage th:utext="${case.B_1_10_2_2a}"/>
+                <parentageunit th:utext="${case.B_1_10_2_2b}"/>
+                <parentlastmenstrualdateformat th:utext="${case.B_1_10_3a}"/>
+                <parentlastmenstrualdate th:utext="${case.B_1_10_3b}"/>
+                <parentweight th:utext="${case.B_1_10_4}"/>
+                <parentheight th:utext="${case.B_1_10_5}"/>
+                <parentsex th:utext="${case.B_1_10_6}"/>
+                <parentmedicalhistoryepisode th:each="item : ${case.B_1_10_7_r}">
+                    <parentmdepisodemeddraversion th:utext="${item.B_1_10_7_1a_1}"/>
+                    <parentmedicalepisodename  th:utext="${item.B_1_10_7_1a_2}"/>
+                    <parentmedicalstartdateformat  th:utext="${item.B_1_10_7_1b}"/>
+                    <parentmedicalstartdate  th:utext="${item.B_1_10_7_1c}"/>
+                    <parentmedicalcontinue  th:utext="${item.B_1_10_7_1d}"/>
+                    <parentmedicalenddateformat  th:utext="${item.B_1_10_7_1e}"/>
+                    <parentmedicalenddate  th:utext="${item.B_1_10_7_1f}"/>
+                    <parentmedicalcomment  th:utext="${item.B_1_10_7_1g}"/>
+                </parentmedicalhistoryepisode>
+                <parentmedicalrelevanttext th:if="${case.B_1_10_7_2}" th:utext="${case.B_1_10_7_2}"/>
+                <parentpastdrugtherapy  th:each="item : ${case.B_1_10_8_r}">
+                    <parentdrugname th:utext="${item.B_1_10_8a}"/>
+                    <parentdrugstartdateformat th:utext="${item.B_1_0_8b}"/>
+                    <parentdrugstartdate th:utext="${item.B_1_0_8c}"/>
+                    <parentdrugenddateformat th:utext="${item.B_1_0_8d}"/>
+                    <parentdrugenddate th:utext="${item.B_1_0_8e}"/>
+                    <parentdrgindicationmeddraversion th:utext="${item.B_1_0_8f_1}"/>
+                    <parentdrugindication th:utext="${item.B_1_0_8f_2}"/>
+                    <parentdrgreactionmeddraversion th:utext="${item.B_1_0_8g_1}"/>
+                    <parentdrugreaction th:utext="${item.B_1_0_8g_2}"/>
+                </parentpastdrugtherapy>
+            </parent>
+            <reaction th:each="item : ${case.B_2_i}">
+                <primarysourcereaction th:utext="${item.B_2_i_0}"/>
+                <reactionmeddraversionllt th:utext="${item.B_2_i_1a}"/>
+                <reactionmeddrallt th:utext="${item.B_2_i_1b}"/>
+                <reactionmeddraversionpt th:utext="${item.B_2_i_2a}"/>
+                <reactionmeddrapt th:utext="${item.B_2_i_2b}"/>
+                <termhighlighted th:utext="${item.B_2_i_3}"/>
+                <reactionstartdateformat th:utext="${item.B_2_i_4a}"/>
+                <reactionstartdate th:utext="${item.B_2_i_4b}"/>
+                <reactionenddateformat th:utext="${item.B_2_i_5a}"/>
+                <reactionenddate th:utext="${item.B_2_i_5b}"/>
+                <reactionduration th:utext="${item.B_2_i_6a}"/>
+                <reactiondurationunit th:utext="${item.B_2_i_6b}"/>
+                <reactionfirsttime th:utext="${item.B_2_i_7_1a}"/>
+                <reactionfirsttimeunit th:utext="${item.B_2_i_7_1b}"/>
+                <reactionlasttime th:utext="${item.B_2_i_7_2a}"/>
+                <reactionlasttimeunit th:utext="${item.B_2_i_7_2b}"/>
+                <reactionoutcome th:utext="${item.B_2_i_8}"/>
+            </reaction>
+            <test th:each="item : ${case.B_3}">
+                <testdateformat th:utext="${item.B_3_1a}"/>
+                <testdate th:utext="${item.B_3_1b}"/>
+                <testname  th:utext="${item.B_3_1c}"/>
+                <testresult th:utext="${item.B_3_1d}"/>
+                <testunit th:utext="${item.B_3_1e}"/>
+                <lowtestrange th:utext="${item.B_3_1_1}"/>
+                <hightestrange th:utext="${item.B_3_1_2}"/>
+                <moreinformation th:utext="${item.B_3_1_3}"/>
+            </test>
+            <drug th:each="item : ${case.B_4_K}">
+                <drugcharacterization th:utext="${item.B_4_k_1}"/>
+                <medicinalproduct th:utext="${item.B_4_k_2_1}"/>
+                <obtaindrugcountry th:utext="${item.B_4_k_2_3}"/>
+                <drugbatchnumb th:utext="${item.B_4_k_3}"/>
+                <drugauthorizationnumb th:utext="${item.B_4_k_4_1}"/>
+                <drugauthorizationcountry th:utext="${item.B_4_k_4_2}"/>
+                <drugauthorizationholder th:utext="${item.B_4_k_4_3}"/>
+                <drugstructuredosagenumb th:utext="${item.B_4_k_5_1}"/>
+                <drugstructuredosageunit th:utext="${item.B_4_k_5_2}"/>
+                <drugseparatedosagenumb  th:utext="${item.B_4_k_5_3}"/>
+                <drugintervaldosageunitnumb th:utext="${item.B_4_k_5_4}"/>
+                <drugintervaldosagedefinition th:utext="${item.B_4_k_5_5}"/>
+                <drugcumulativedosagenumb  th:utext="${item.B_4_k_5_6}"/>
+                <drugcumulativedosageunit  th:utext="${item.B_4_k_5_7}"/>
+                <drugdosagetext th:utext="${item.B_4_k_6}"/>
+                <drugdosageform th:utext="${item.B_4_k_7}"/>
+                <drugadministrationroute th:utext="${item.B_4_k_8}"/>
+                <drugparadministration th:utext="${item.B_4_k_9}"/>
+                <reactiongestationperiod th:utext="${item.B_4_k_10a}"/>
+                <reactiongestationperiodunit th:utext="${item.B_4_k_10b}"/>
+                <drugindicationmeddraversion th:utext="${item.B_4_k_11a}"/>
+                <drugindication th:utext="${item.B_4_k_11b}"/>
+                <drugstartdateformat th:utext="${item.B_4_k_12a}"/>
+                <drugstartdate th:utext="${item.B_4_k_12b}"/>
+                <drugstartperiod th:utext="${item.B_4_k_13_1a}"/>
+                <drugstartperiodunit th:utext="${item.B_4_k_13_1b}"/>
+                <druglastperiod th:utext="${item.B_4_k_13_2a}"/>
+                <druglastperiodunit th:utext="${item.B_4_k_13_2b}"/>
+                <drugenddateformat th:utext="${item.B_4_k_14a}"/>
+                <drugenddate th:utext="${item.B_4_k_14b}"/>
+                <drugtreatmentduration th:utext="${item.B_4_k_15a}"/>
+                <drugtreatmentdurationunit th:utext="${item.B_4_k_15b}"/>
+                <actiondrug th:utext="${item.B_4_k_16}"/>
+                <drugrecurreadministration th:utext="${item.B_4_k_17_1}"/>
+                <drugadditional  th:utext="${item.B_4_k_19}"/>
+                <activesubstance th:each="ig : ${item.ingredients}">
+                    <activesubstancename th:utext="${ig}"/>
+                </activesubstance>
+                <drugrecurrence th:if="${item.B_4_k_17_1 == 1}" th:each="e : ${item.B_4_k_17_2_r}">
+                    <drugrecuractionmeddraversion th:utext="${e.B_4_k_17_2a}"/>
+                    <drugrecuraction th:utext="${e.B_4_k_17_2b}"/>
+                </drugrecurrence>
+                <drugreactionrelatedness th:each="es : ${item.assess}">
+                    <drugreactionassesmeddraversion th:utext="${es.B_4_k_18_1a}"/>
+                    <drugreactionasses th:utext="${es.B_4_k_18_1b}"/>
+                    <drugassessmentsource th:utext="${es.B_4_k_18_2}"/>
+                    <drugassessmentmethod th:utext="${es.B_4_k_18_3}"/>
+                    <drugresult th:utext="${es.B_4_k_18_4}"/>
+                </drugreactionrelatedness>
+            </drug>
+            <summary>
+                <narrativeincludeclinical th:if="${case.B_5_1}" th:utext="${case.B_5_1}"/>
+                <reportercomment th:if="${case.B_5_2}" th:utext="${case.B_5_2}"/>
+                <senderdiagnosismeddraversion th:if="${case.B_5_3a}" th:utext="${case.B_5_3a}"/>
+                <senderdiagnosis th:if="${case.B_5_3b}" th:utext="${case.B_5_3b}"/>
+                <sendercomment th:if="${case.B_5_4}" th:utext="${case.B_5_4}"/>
+            </summary>
+        </patient>
+    </safetyreport>
+</ichicsr>
